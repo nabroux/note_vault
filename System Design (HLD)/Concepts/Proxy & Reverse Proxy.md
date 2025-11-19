@@ -3,7 +3,7 @@
 
 ### **🧩 Proxy（代理伺服器）**
 
-![[Pasted image 20251024184101.png]]
+![[../../assets/System Design (HLD)/Concepts/Proxy & Reverse Proxy.md/Pasted image 20251024184101.png]]
   
 **中文：代理伺服器**
 
@@ -38,7 +38,7 @@
 
 ### **🔁 Reverse Proxy（反向代理伺服器）**
 
-  ![[Pasted image 20251024184129.png]]
+  ![[../../assets/System Design (HLD)/Concepts/Proxy & Reverse Proxy.md/Pasted image 20251024184129.png]]
 
 **中文：反向代理伺服器**
 

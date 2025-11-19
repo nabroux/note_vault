@@ -12,3 +12,6 @@
 面試注意要點：
 1. 根據細節積極提問，溝通系統功能
 2. 主動提出tradeoff
+
+### Delivery Framework
+https://www.hellointerview.com/learn/system-design/in-a-hurry/delivery
