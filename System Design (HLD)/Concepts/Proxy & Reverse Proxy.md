@@ -1,9 +1,9 @@
 > Proxy act as a middleman, hide your ip and location
 > Reverse proxy works the other way around (server side) 
-
+![](assets/Proxy%20&%20Reverse%20Proxy/file-20251119194309517.png)
 ### **🧩 Proxy（代理伺服器）**
 
-![[../../assets/System Design (HLD)/Concepts/Proxy & Reverse Proxy.md/Pasted image 20251024184101.png]]
+![Pasted image 20251024184101](<assets/Proxy & Reverse Proxy/Pasted image 20251024184101.png>)
   
 **中文：代理伺服器**
 
@@ -38,7 +38,7 @@
 
 ### **🔁 Reverse Proxy（反向代理伺服器）**
 
-  ![[../../assets/System Design (HLD)/Concepts/Proxy & Reverse Proxy.md/Pasted image 20251024184129.png]]
+  ![Pasted image 20251024184129](<assets/Proxy & Reverse Proxy/Pasted image 20251024184129.png>)
 
 **中文：反向代理伺服器**
 

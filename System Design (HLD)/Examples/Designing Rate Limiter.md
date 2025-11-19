@@ -20,7 +20,7 @@ Rate Limiter 對 Redis 要用長連線池，不要每次重新連
 
 Delivery Framework here
 
-![[../../assets/System Design (HLD)/Examples/Designing Rate Limiter/Pasted image 20251107104539.png]]
+![Pasted image 20251107104539](<assets/Designing Rate Limiter/Pasted image 20251107104539.png>)
 
 Funtional Requirements
 - identify users by id IP or API key
@@ -59,18 +59,18 @@ isRequestedAllowed(clientId, rulesId) -> {is_allowed: boolean, remaining: number
 2. how should we identify clients?
 
 
-![[../../assets/System Design (HLD)/Examples/Designing Rate Limiter/Pasted image 20251106021653.png]]
+![Pasted image 20251106021653](<assets/Designing Rate Limiter/Pasted image 20251106021653.png>)
 
 放在各個微服務：
 優點：速度很快，都是in-memory，但缺點很明顯 沒有global picture，無法正確限流
 
 那如果把RL拉出來 獨立成一個服務呢？
 
-![[../../assets/System Design (HLD)/Examples/Designing Rate Limiter/Pasted image 20251106022420.png]]
+![Pasted image 20251106022420](<assets/Designing Rate Limiter/Pasted image 20251106022420.png>)
 
 解決了微服務間沒有global picture的問題，但會應加 latency，在Non-functional Requirements中我們有提出要讓延遲降低至10ms。
 
-![[../../assets/System Design (HLD)/Examples/Designing Rate Limiter/Pasted image 20251106022533.png]]
+![Pasted image 20251106022533](<assets/Designing Rate Limiter/Pasted image 20251106022533.png>)
 
 如果把 RL 移動到 gateway，可以扮演門衛角色，速度也會快 因為in-memory
 問題是不會知道後端應用層邏輯，不能像後端彈性調整，但可以透過JWT夾帶分析使用者的身份資訊  clienId, API key, IP
@@ -114,7 +114,7 @@ remove 1 token each request, If no tokens in bucket, reject
 
 
 實際情況可能會有多個 Gateway，這時候就要使用Redis
-![[../../assets/System Design (HLD)/Examples/Designing Rate Limiter/Pasted image 20251107111951.png]]
+![Pasted image 20251107111951](<assets/Designing Rate Limiter/Pasted image 20251107111951.png>)
 
 What happens here:
 1. request come in
@@ -204,7 +204,7 @@ Use a push-based system where configuration changes are immediately sent to all 
 
 When an operator changes a rate limit rule, the configuration service immediately notifies all connected gateways, which update their rules within seconds.
 
-![[../../assets/System Design (HLD)/Examples/Designing Rate Limiter/Pasted image 20251107121246.png]]
+![Pasted image 20251107121246](<assets/Designing Rate Limiter/Pasted image 20251107121246.png>)
 ###### Challenges
 
 This approach adds a lot more complexity. You need to handle connection failures, ensure all gateways receive updates, and deal with partial failures where some gateways update successfully while others don't. You also need fallback mechanisms when the push system is unavailable.

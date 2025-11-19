@@ -1,7 +1,7 @@
 
 ## **🧩 一、什麼是 Load Balancer（負載平衡器）**
 
-![[../../assets/System Design (HLD)/Concepts/Load Balancer/Pasted image 20251026103028.png]]
+![Pasted image 20251026103028](<assets/Load Balancer/Pasted image 20251026103028.png>)
 
 **定義：**
 
